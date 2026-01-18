@@ -4,7 +4,7 @@ import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 // Initialize Gemini Client
 // NOTE: In a real app, never expose API keys on the client side. 
 // This is for demonstration purposes within the requested architecture.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.GEMINI_API_KEY });
 
 export const askDocumentChatbot = async (
   documentContent: string,
